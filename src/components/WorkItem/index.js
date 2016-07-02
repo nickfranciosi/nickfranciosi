@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import styles from './styles.css';
 
 const WorkItem = ({title, description, img}) => {
   return (
-    <Link to={'/portfolio/' + title} className="workItem"  style={{backgroundImage: 'url(' + img + ')'}}>
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <Link to={'/portfolio/' + title} className={styles.workItem}  style={{backgroundImage: 'url(' + img + ')'}}>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.description}>{description}</p>
     </Link>
   );
 };

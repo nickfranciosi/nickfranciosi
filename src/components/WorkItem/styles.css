@@ -1,0 +1,36 @@
+.workItem{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  transition: all .5s ease;
+  height: 300px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.title{
+  transition: all 1.5s ease;
+  padding: 2em;
+  background: rgba(0,0,0, .55);
+  color: #fff;
+}
+
+.description {
+  display: none;
+}
+
+.workItem:hover{
+  transition: all .5s ease;
+  transform: scale(1.2);
+  filter: grayscale(100%);
+}
+
+.workItem:hover .title{
+  transition: all 1.5s ease;
+  background: rgba(0,0,0, 1);
+  color: red;
+}

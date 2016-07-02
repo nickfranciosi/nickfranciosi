@@ -1,0 +1,52 @@
+* {
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+//Links
+a{
+  color: #000;
+  transition: all ease .3s;
+}
+
+a:link {
+  color: #000;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  transition: all ease .3s;
+  color: #fa5e5b;
+}
+a:active {
+  transition: all ease .3s;
+  color: #fa5e5b;
+}
+a:active {
+  color: #fa5e5b;
+}
+
+//animations
+.route-enter {
+  opacity: 0.01;
+  transition: opacity .5s ease-in;
+}
+
+.route-enter.route-enter-active {
+  opacity: 1;
+}
+
+.route-leave {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.route-leave.route-leave-active {
+  opacity: 0.01;
+}
+
+//WorkItem
+.flex_list{
+  display: flex;
+  flex-flow: row wrap;
+}

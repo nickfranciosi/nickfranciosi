@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WorkItem from '../components/WorkItem';
+import {flex_list} from '../styles/global.css';
 import LunchNLearnImage from '../images/lunch-n-learn.png';
 import DashboardImage from '../images/dashboard.jpg';
 import MoreToYouthImage from '../images/moretoyouth.jpg';
@@ -10,7 +11,7 @@ class Portfolio extends Component {
     return(
       <div>
         <h2>Portfolio</h2>
-        <div className="work-item-list">
+        <div className={flex_list}>
           <WorkItem
             title="LunchNLearn"
             description="A test"

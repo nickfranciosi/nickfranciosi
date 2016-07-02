@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import '../styles/global.scss';
+import '../styles/global.css';
 import Nav from '../components/Nav/';
 
 class App extends Component {
