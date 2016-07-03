@@ -2,6 +2,10 @@
   font-family: 'Droid Sans Mono', monospace;
 }
 
+body {
+  overflow: hidden;
+}
+
 //Links
 a{
   color: #000;
@@ -27,22 +31,62 @@ a:active {
 }
 
 //animations
-.route-enter {
-  opacity: 0.01;
-  transition: opacity .5s ease-in;
-}
+:global {
+  #main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    height:100vh;
+    min-height:100vh;
+  }
 
-.route-enter.route-enter-active {
-  opacity: 1;
-}
+  #side-menu {
+    flex: 0.3;
+  }
 
-.route-leave {
-  opacity: 1;
-  transition: opacity .5s ease-in;
-}
+  #content {
+    flex: 0.7;
+    padding-top: 10vh;
+    overflow-x: auto;
+    background: url('/images/pizza.jpg') 50% 50% / cover no-repeat;;
+  }
 
-.route-leave.route-leave-active {
-  opacity: 0.01;
+  .hangover{
+    clear: both;
+    height: 20vh;
+  }
+
+  .hangover h1 {
+    position: absolute;
+    border-bottom: 10px solid yellow;
+    z-index: 5;
+  }
+
+  .transition-group {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .page-enter {
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: all 300ms ease-out;
+    transition-delay: 300ms;
+  }
+
+  .page-enter.page-enter-active {
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-leave {
+    opacity: 1;
+    transition: all 300ms linear;
+  }
+
+  .page-leave.page-leave-active {
+    opacity: 0;
+  }
 }
 
 //WorkItem

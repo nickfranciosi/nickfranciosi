@@ -6,12 +6,18 @@ import Nav from '../components/Nav/';
 class App extends Component {
   render () {
     return(
-      <div>
-        <h1>Nick Franciosi | Web Developer</h1>
-        <Nav />
+      <div id="main">
+        <div id="side-menu">
+          <div className="hangover">
+            <h1>Nick Franciosi | Web Developer</h1>
+          </div>
+          <Nav />
+        </div>
         <ReactCSSTransitionGroup
         component="div"
-        transitionName="route"
+        id="content"
+        className="transition-group"
+        transitionName="page"
         transitionEnterTimeout={500}
         transitionLeaveTimeout={500}
         >
